@@ -34,11 +34,10 @@ public class TestSuper {
 			// Testfalls
 			String screenshot_name = System.getProperty("user.dir") 
 					+ "screen_" 
-					+ result.getMethod().getMethodName() 
-					+ ".jpg";
+					+ result.getMethod().getMethodName();
 
 			// Screenshot machen und speichern (neu)
-			Screenshot.takeScreenshotByName(driver, screenshot_name);
+			Screenshot.takeScreenshot(driver);
 
 			// Verbinung zu Hub beenden, Testende
 			driver.quit();

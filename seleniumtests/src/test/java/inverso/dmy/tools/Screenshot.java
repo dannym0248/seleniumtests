@@ -29,21 +29,4 @@ public class Screenshot {
 		
 		Reporter.log("Screenshot at " + DestFile.getAbsolutePath(), true);
 	}
-	
-	public static void takeScreenshotByName(WebDriver webdriver, String name) throws Exception {
-		// Convert web driver object to TakeScreenshot
-		TakesScreenshot scrShot = ((TakesScreenshot) webdriver);
-		// Call getScreenshotAs method to create image file
-		File SrcFile = scrShot.getScreenshotAs(OutputType.FILE);
-		// Copy file at destination
-		File DestFile = new File(name + ".jpg");
-		try {
-			FileUtils.copyFile(SrcFile, DestFile);
-		} catch (IOException e) {
-			Reporter.log("Fehler beim Screenshot machen.", true);
-			e.printStackTrace();
-		}
-		
-		Reporter.log("Screenshot at " + DestFile.getAbsolutePath(), true);
-	}
 }
