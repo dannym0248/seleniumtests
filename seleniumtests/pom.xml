@@ -96,7 +96,7 @@
 					<configuration>
 						<filesets>
 							<fileset>
-								<directory>screenshots/*</directory>
+								<directory>C:\Users\danny\git\seleniumtests\seleniumtests\seleniumtests\screenshots</directory>
 								<includes>*.jpg</includes>
 							</fileset>
 						</filesets>
