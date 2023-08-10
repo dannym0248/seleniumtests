@@ -6,21 +6,21 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.testng.Reporter;
 
-public class SeleniumTools {
-	/**
-	 * This function will take screenshot
-	 * 
-	 * @param webdriver
-	 * @param fileWithPath
-	 * @throws Exception
-	 */
-	public static void takeSnapShot(WebDriver webdriver, File file) throws Exception {
+public class Screenshot {
+	static int counter = 0;
+	
+	public static void takeScreenshot(WebDriver webdriver, String directory) throws Exception {
+		counter++;
 		// Convert web driver object to TakeScreenshot
 		TakesScreenshot scrShot = ((TakesScreenshot) webdriver);
 		// Call getScreenshotAs method to create image file
 		File SrcFile = scrShot.getScreenshotAs(OutputType.FILE);
 		// Copy file at destination
-		FileUtils.copyFile(SrcFile, file);
+		File DestFile = new File(directory + "screen" + counter + ".jpg");
+		FileUtils.copyFile(SrcFile, DestFile);
+		
+		Reporter.log("Screenshot at " + DestFile.getAbsolutePath(), true);
 	}
 }

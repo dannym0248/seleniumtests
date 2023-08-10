@@ -4,7 +4,7 @@
 <suite name="Suite1" verbose="1" >
   <test name="testA" >
     <classes>
-       <class name="com.test.TestA" />
+       <class name="inverso.dmy.test.TestA" />
     </classes>
   </test>
 </suite>
