@@ -120,6 +120,7 @@
 						<filesets>
 							<fileset>
 								<directory>screenshots/*</directory>
+								<includes>*.jpg</includes>
 							</fileset>
 						</filesets>
 					</configuration>
