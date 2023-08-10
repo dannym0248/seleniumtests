@@ -103,7 +103,7 @@
                     <div class="method-list-content passed suite-Suite1">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite1" title="inverso.dmy.test.TestA" class="method navigator-link" hash-for-method="test_aufruf_google">test_aufruf_google</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite1" title="inverso.dmy.test.TestB" class="method navigator-link" hash-for-method="test_anmeldung_swaglabs">test_anmeldung_swaglabs</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite1 -->
@@ -121,14 +121,14 @@
           <div class="suite-Suite1-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">inverso.dmy.test.TestA</span>
+              <span class="class-name">inverso.dmy.test.TestB</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="test_aufruf_google">
-                  </a> <!-- test_aufruf_google -->
-                  <span class="method-name">test_aufruf_google</span>
+                  <a name="test_anmeldung_swaglabs">
+                  </a> <!-- test_anmeldung_swaglabs -->
+                  <span class="method-name">test_anmeldung_swaglabs</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -143,11 +143,12 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite1&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;testA&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;testB&quot;&gt;
+    &lt;parameter name=&quot;urlHub&quot; value=&quot;http://192.168.16.103:4444/wd/hub&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;inverso.dmy.test.TestA&quot;/&gt;
+      &lt;class name=&quot;inverso.dmy.test.TestB&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- testA --&gt;
+  &lt;/test&gt; &lt;!-- testB --&gt;
 &lt;/suite&gt; &lt;!-- Suite1 --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -159,7 +160,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">testA (1 class)</span>
+                <span class="test-name">testB (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -187,14 +188,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'test_aufruf_google')
-data.setCell(0, 2, 'inverso.dmy.test.TestA')
-data.setCell(0, 3, 7013);
+data.setCell(0, 1, 'test_anmeldung_swaglabs')
+data.setCell(0, 2, 'inverso.dmy.test.TestB')
+data.setCell(0, 3, 11407);
 window.suiteTableData['Suite1']= { tableData: data, tableDiv: 'times-div-Suite1'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 7 seconds</span>
+              <span class="suite-total-time">Total running time: 11 seconds</span>
               <div id="times-div-Suite1">
               </div> <!-- times-div-Suite1 -->
             </div> <!-- times-div -->
@@ -206,9 +207,9 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">test_aufruf_google</span>
+              <span class="reporter-method-name">test_anmeldung_swaglabs</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Screenshot at C:\Users\danny\git\seleniumtests\seleniumtests\seleniumtestsscreen1.jpg</span>
+                <span class="reporter-method-output">Screenshot at C:\Users\danny\git\seleniumtests\seleniumtests\seleniumtests\screenshots\screen1.jpg</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -226,15 +227,19 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">inverso.dmy.test.TestA</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">inverso.dmy.test.TestB</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">test_vorbereitung</span>
+                <span class="method-name">test_vorbereitung(http://192.168.16.103:4444/wd/hub)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">test_aufruf_google</span>
-                <span class="method-start">42 ms</span>
+                <span class="method-name">test_anmeldung_swaglabs</span>
+                <span class="method-start">62 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">failure_setup([TestResult name=test_anmeldung_swaglabs status=SUCCESS method=TestB.test_anmeldung_swaglabs()[pri:0...)</span>
+                <span class="method-start">11473 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

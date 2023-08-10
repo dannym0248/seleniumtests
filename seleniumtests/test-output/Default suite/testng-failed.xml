@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="src.test.java.testA">
+      <class name="inverso.dmy.test.TestB">
         <methods>
-          <include name="test_aufruf_google"/>
+          <include name="failure_setup"/>
+          <include name="test_anmeldung_swaglabs"/>
+          <include name="test_vorbereitung"/>
         </methods>
-      </class> <!-- src.test.java.testA -->
+      </class> <!-- inverso.dmy.test.TestB -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

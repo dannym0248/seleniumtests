@@ -20,7 +20,7 @@ public class TestA extends TestSuper{
 		driver.manage().window().maximize();
 		driver.get(url_webseite.toString());
 
-		Screenshot.takeScreenshot(driver, System.getProperty("user.dir"));
+		Screenshot.takeScreenshot(driver);
 		
 		driver.quit();
 	}

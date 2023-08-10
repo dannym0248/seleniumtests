@@ -8,6 +8,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.Test;
 
+import inverso.dmy.tools.Screenshot;
+
 public class TestB extends TestSuper {
 	
 	@Test
@@ -37,11 +39,14 @@ public class TestB extends TestSuper {
 		password_field.sendKeys("secret_sauce");
 		login_button.submit();
 		
+		// Screenshot machen
+		Screenshot.takeScreenshot(driver);
+		
 		// Herausfinden, ob Anmeldung erfolgreich war
 		
 		// 5 Sekunden warten
 		try {
-			Thread.currentThread().wait(5000);
+			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
