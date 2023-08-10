@@ -75,6 +75,17 @@
 			<plugin>
 				<artifactId>maven-clean-plugin</artifactId>
 				<version>3.3.1</version>
+				<configuration>
+						<filesets>
+							<fileset>
+								<directory>
+									C:\Users\danny\git\seleniumtests\seleniumtests\seleniumtests\screenshots</directory>
+								<includes>
+									<include>*.jpg</include>
+								</includes>
+							</fileset>
+						</filesets>
+					</configuration>
 				<executions>
 					<execution>
 						<id>auto-clean</id>
@@ -86,26 +97,5 @@
 				</executions>
 			</plugin>
 		</plugins>
-		<pluginManagement>
-			<plugins>
-				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
-				<plugin>
-					<groupId>org.eclipse.m2e</groupId>
-					<artifactId>lifecycle-mapping</artifactId>
-					<version>1.0.0</version>
-					<configuration>
-						<filesets>
-							<fileset>
-								<directory>
-									C:\Users\danny\git\seleniumtests\seleniumtests\seleniumtests\screenshots</directory>
-								<includes>
-									<include>*.jpg</include>
-								</includes>
-							</fileset>
-						</filesets>
-					</configuration>
-				</plugin>
-			</plugins>
-		</pluginManagement>
 	</build>
 </project>
