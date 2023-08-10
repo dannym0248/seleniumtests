@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 import inverso.dmy.tools.SeleniumTools;
 
-public class testA {
+public class TestA {
 	
 	@Test
 	public void test_aufruf_google() throws Exception {

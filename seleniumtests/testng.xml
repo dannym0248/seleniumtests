@@ -4,7 +4,7 @@
 <suite name="Suite1" verbose="1" >
   <test name="testA" >
     <classes>
-       <class name="com.test.testA" />
+       <class name="com.test.TestA" />
     </classes>
   </test>
 </suite>
