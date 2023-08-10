@@ -35,7 +35,7 @@ public class TestB extends TestSuper {
 		WebElement login_button = driver.findElement(By.xpath("//*[@id=\"login-button\"]"));
 		
 		// Fehler provozieren
-		WebElement login_button = driver.findElement(By.xpath("//*sghuidvndjkvnuildhbldjkbngin-button\"]"));
+		WebElement abc = driver.findElement(By.xpath("//*sghuidvndjkvnuildhbldjkbngin-button\"]"));
 		
 		// Anmeldungsdaten eingeben und bestätigen
 		username_field.sendKeys("standard_user");
