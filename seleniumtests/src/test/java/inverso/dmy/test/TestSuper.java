@@ -30,11 +30,6 @@ public class TestSuper {
 		 */
 		if (result.getStatus() == 2) {
 			System.err.println("Es ist etwas schief gelaufen. (" + id_thread + ")");
-			// Erstellen eines Dateinamens für den Screenshot basierend auf dem Namen des
-			// Testfalls
-			String screenshot_name = System.getProperty("user.dir") 
-					+ "screen_" 
-					+ result.getMethod().getMethodName();
 
 			// Screenshot machen und speichern (neu)
 			Screenshot.takeScreenshot(driver);
