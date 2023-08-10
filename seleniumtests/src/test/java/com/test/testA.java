@@ -1,4 +1,4 @@
-package meineTests;
+package com.test;
 
 import java.io.File;
 import java.net.URL;
@@ -16,10 +16,11 @@ public class testA {
 	@Test
 	public void test_aufruf_google() throws Exception {
 		URL url_webseite = new URL("https://www.google.com");
-		URL url_hub = new URL("http://192.168.16.121:4444/wd/hub");
+		URL url_hub = new URL("http://192.168.16.103:4444/wd/hub");
 		
 		ChromeOptions options = new ChromeOptions();
-		options.setCapability("platformName", "linux");
+//		options.setCapability("platformName", "Windows 10");
+//		options.setCapability("browserVersion", "115.0");
 		
 		WebDriver driver = new RemoteWebDriver(url_hub, options);
 		driver.manage().window().maximize();
