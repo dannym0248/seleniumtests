@@ -96,8 +96,11 @@
 					<configuration>
 						<filesets>
 							<fileset>
-								<directory>C:\Users\danny\git\seleniumtests\seleniumtests\seleniumtests\screenshots</directory>
-								<includes>*.jpg</includes>
+								<directory>
+									C:\Users\danny\git\seleniumtests\seleniumtests\seleniumtests\screenshots</directory>
+								<includes>
+									<include>*.jpg</include>
+								</includes>
 							</fileset>
 						</filesets>
 					</configuration>
