@@ -15,9 +15,10 @@ public class Screenshot {
 	
 	// Screenshot von aktueller Seite machen
 	// Speichern im screenshots-Ordner des Projektes
-	public static void takeScreenshot(WebDriver webdriver) {
+	public static String takeScreenshot(WebDriver webdriver) {
 		// 1 Sekunden warten, damit Seite vollständig geladen
 		// besser wäre vllt auf ein bestimmtes Element zu warten....
+		// jenes Element könnte als Parameter übergeben werden
 		try {
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {
@@ -41,5 +42,7 @@ public class Screenshot {
 		// Protokollierung, dass ein Screenshot gemacht wurde
 		// Ausgabe des Speicherortes
 		Reporter.log("Screenshot at " + DestFile.getAbsolutePath(), true);
+		
+		return DestFile.getAbsolutePath();
 	}
 }

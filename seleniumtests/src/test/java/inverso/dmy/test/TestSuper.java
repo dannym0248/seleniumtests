@@ -5,6 +5,7 @@ import java.net.URL;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
+import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
@@ -32,6 +33,7 @@ public class TestSuper {
 	// Untersuchen ob Fehler
 	@AfterMethod
 	public void failure_setup(ITestResult result) throws Exception {
+		Reporter.setCurrentTestResult(result);
 		/*
 		 * Falls ein Fehler beim Testen aufgetreten ist, dann - Ausgabe auf
 		 * Kommandozeile - und mache Screenshot des Browsers
@@ -39,8 +41,12 @@ public class TestSuper {
 		if (result.getStatus() == 2) {
 			System.err.println("Es ist etwas schief gelaufen. (" + id_thread + ")");
 
-			// Screenshot machen und speichern (neu)
-			Screenshot.takeScreenshot(driver);
+			// Screenshot machen und speichern
+			String img_path = Screenshot.takeScreenshot(driver);
+			
+			// Screenshot auf Reporter-Webseite speichern
+			Reporter.log(" <a href='" + img_path + "'> <img src='" + img_path
+			+ "'height='700' width='900'/> </a>");
 
 			// Verbinung zu Hub beenden, Testende
 			driver.quit();
