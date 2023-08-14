@@ -1,4 +1,4 @@
-package inverso.dmy.test;
+package com.inverso.dmy.test;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -10,7 +10,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
-import inverso.dmy.tools.Screenshot;
+import com.inverso.dmy.tools.Screenshot;
 
 // Von dieser Klasse werden alle Test-Klassen erben
 // vor jedem Test soll bspw. das Hub verbunden werden

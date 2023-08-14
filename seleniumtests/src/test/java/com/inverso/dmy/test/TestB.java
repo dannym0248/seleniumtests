@@ -1,4 +1,4 @@
-package inverso.dmy.test;
+package com.inverso.dmy.test;
 
 import java.net.MalformedURLException;
 import java.time.Duration;
@@ -12,7 +12,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
-import inverso.dmy.tools.Screenshot;
+import com.inverso.dmy.tools.Screenshot;
+
 
 public class TestB extends TestSuper {
 	
