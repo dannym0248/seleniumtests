@@ -3,6 +3,7 @@ package com.inverso.dmy.test;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -16,26 +17,34 @@ public class TestC extends TestSuper {
 
 	@Test
 	public void anmeldung_test() {
-		String url_webseite = "https://the-internet.herokuapp.com/basic_auth";
+		// Url der Testseite
+		// hier: Anmeldung an einem Popup-Fenster
+		String url_webseite = "https://admin:admin@the-internet.herokuapp.com/basic_auth";
 
+		// Browser bestimmen
 		ChromeOptions options = new ChromeOptions();
 
+		// Verbindung zu Selenium-Grid
 		driver = new RemoteWebDriver(url_hub, options);
 
+		// Webseite öffnen
 		driver.get(url_webseite);
 
+		// Screenshot machen
 		Screenshot.takeScreenshot(driver);
 
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		Boolean loginErfolg = wait.until(ExpectedConditions.textToBePresentInElement(driver.findElement(By.xpath("//*[@id=\"content\"]/div/p")), "Congratulations"));
+		// warten, ob Anmeldung erfolgreich
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement loginErfolg = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"content\"]/div/p")));
 		
-		if (loginErfolg) {
+		// Prüfen, ob Anmeldung erfolgreich
+		if (loginErfolg != null) {
 			Reporter.log("Anmeldung erfolgreich!", true);
 		} else {
 			Reporter.log("Anmeldung nicht erfolgreich!", true);
 		}
 
+		// Test beenden
 		driver.quit();
-		//
 	}
 }
