@@ -89,7 +89,7 @@
 					<filesets>
 						<fileset>
 							<directory>
-								C:\Users\danny\git\seleniumtests\seleniumtests\seleniumtests\screenshots</directory>
+								C:\Users\danny\git\seleniumtests\seleniumtests\screenshots</directory>
 							<includes>
 								<include>*.jpg</include>
 							</includes>
