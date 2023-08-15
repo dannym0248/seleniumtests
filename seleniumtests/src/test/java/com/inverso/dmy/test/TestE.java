@@ -1,9 +1,12 @@
 package com.inverso.dmy.test;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import com.inverso.dmy.tools.Screenshot;
@@ -30,8 +33,18 @@ public class TestE extends TestSuper {
 		driver.get(url_webseite);
 		
 		// Elemente, die Checkboxen sind, finden
-		WebElement checkbox1 = driver.findElement(By.xpath("//*[@id=\"checkboxes\"]/input[1]"));
-		WebElement checkbox2 = driver.findElement(By.xpath("//*[@id=\"checkboxes\"]/input[2]"));
+		// Initialisierung nicht nötig, da, wenn Elemente nicht gefunden werden,
+		// Programm abgebrochen wird
+		WebElement checkbox1 = null;
+		WebElement checkbox2 = null;
+		try {
+			checkbox1 = driver.findElement(By.xpath("//*[@id=\"checkboxes\"]/input[1]"));
+			checkbox2 = driver.findElement(By.xpath("//*[@id=\"checkboxes\"]/input[2]"));
+		} catch (NoSuchElementException e) {
+			String fehlermeldung = "Mindestens eine Checkbox konnte nicht gefunden werden!";
+			Reporter.log(fehlermeldung, true);
+			Assert.fail(fehlermeldung);
+		}
 		
 		// Screenshot "vorher"-zustand
 		Screenshot.takeScreenshot(driver);
