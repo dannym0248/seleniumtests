@@ -5,7 +5,7 @@
   <test name="testB" >
   	<parameter name="urlHub" value="http://192.168.16.103:4444/wd/hub"></parameter>
     <classes>
-       <class name="com.inverso.dmy.test.TestC" />
+       <class name="com.inverso.dmy.test.TestD" />
     </classes>
   </test>
 </suite>
