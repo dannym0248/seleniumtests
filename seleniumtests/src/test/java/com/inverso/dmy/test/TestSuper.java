@@ -39,7 +39,7 @@ public class TestSuper {
 		 * Kommandozeile - und mache Screenshot des Browsers
 		 */
 		if (result.getStatus() == 2) {
-			System.err.println("Es ist etwas schief gelaufen. (" + id_thread + ")");
+			Reporter.log("Es ist etwas schief gelaufen. (" + id_thread + ")", true);
 
 			// Screenshot machen und speichern
 			String img_path = Screenshot.takeScreenshot(driver);
