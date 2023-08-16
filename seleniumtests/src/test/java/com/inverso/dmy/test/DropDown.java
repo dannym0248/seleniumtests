@@ -2,8 +2,6 @@ package com.inverso.dmy.test;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.Reporter;
@@ -11,7 +9,7 @@ import org.testng.annotations.Test;
 
 import com.inverso.dmy.tools.Screenshot;
 
-public class TestD extends TestSuper {
+public class DropDown extends TestSuper {
 	
 	/*
 	 * Dieser Test soll in einem Dropdown-Menü etwas auswählen.
@@ -19,21 +17,15 @@ public class TestD extends TestSuper {
 	 * der Test abgebrochen werden.
 	 */
 	@Test
-	public void test_dropdown() {
+	public void test_method() {
 		// Webseite zum Testen eines DropDown-Menüs
 		String url_webseite = "https://the-internet.herokuapp.com/dropdown";
-		
-		// Browser festlegen
-		ChromeOptions options = new ChromeOptions();
-		
-		// Verbindung zu Selenium Grid aufbauen
-		driver = new RemoteWebDriver(url_hub, options);
 		
 		// Webseite öffnen
 		driver.get(url_webseite);
 		
 		// Screenshot von Seite machen
-		Screenshot.takeScreenshot(driver);
+		Screenshot.takeScreenshot(driver, "//*[@id=\"dropdown\"]");
 		
 		// Dropdown-Menü suchen
 		Select dropdown = new Select(driver.findElement(By.xpath("//*[@id=\"dropdown\"]")));
@@ -53,7 +45,7 @@ public class TestD extends TestSuper {
 		}
 		
 		// Element wurde gefunden, also Beweisfoto machen
-		Screenshot.takeScreenshot(driver);
+		Screenshot.takeScreenshot(driver, null);
 		
 		// Test beenden
 		driver.quit();

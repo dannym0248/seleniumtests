@@ -3,15 +3,13 @@ package com.inverso.dmy.test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import com.inverso.dmy.tools.Screenshot;
 
-public class TestE extends TestSuper {
+public class Checkbox extends TestSuper {
 	
 	/*
 	 * Dieser Test soll prüfen, ob auf einer Webseite
@@ -19,15 +17,9 @@ public class TestE extends TestSuper {
 	 * nichts tun. Ansonsten auswählen.
 	 */
 	@Test
-	public void test_checkbox() {
+	public void test_method() {
 		// Adresse der Webseite mit Checkboxen
 		String url_webseite = "https://the-internet.herokuapp.com/checkboxes";
-		
-		// Browser wählen
-		ChromeOptions options = new ChromeOptions();
-		
-		// Verbindung zu Selenium Grid aufbauen
-		driver = new RemoteWebDriver(url_hub, options);
 		
 		// Webseite öffnen
 		driver.get(url_webseite);
@@ -47,7 +39,7 @@ public class TestE extends TestSuper {
 		}
 		
 		// Screenshot "vorher"-zustand
-		Screenshot.takeScreenshot(driver);
+		Screenshot.takeScreenshot(driver, "//*[@id=\"checkboxes\"]/input[1]");
 		
 		// wenn checkbox 1 nicht ausgewählt, dann auswählen
 		if (!checkbox1.isSelected()) {
@@ -55,7 +47,7 @@ public class TestE extends TestSuper {
 		}
 		
 		// Screenshot erster "nachher" - zustand
-		Screenshot.takeScreenshot(driver);
+		Screenshot.takeScreenshot(driver, "//*[@id=\"checkboxes\"]/input[2]");
 		
 		// wenn checkbox 2 nicht ausgewählt, dann auswählen
 		if (!checkbox2.isSelected()) {
@@ -63,7 +55,7 @@ public class TestE extends TestSuper {
 		}
 		
 		// Screenshot zweiter "nachher" - Zustand
-		Screenshot.takeScreenshot(driver);
+		Screenshot.takeScreenshot(driver, "//*[@id=\"checkboxes\"]/input[1]");
 		
 		// Test beenden
 		driver.quit();

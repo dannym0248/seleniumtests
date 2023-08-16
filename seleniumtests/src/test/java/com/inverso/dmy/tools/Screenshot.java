@@ -2,11 +2,15 @@ package com.inverso.dmy.tools;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.Duration;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 
 public class Screenshot {
@@ -15,15 +19,13 @@ public class Screenshot {
 	
 	// Screenshot von aktueller Seite machen
 	// Speichern im screenshots-Ordner des Projektes
-	public static String takeScreenshot(WebDriver webdriver) {
-		// 1 Sekunden warten, damit Seite vollständig geladen
-		// besser wäre vllt auf ein bestimmtes Element zu warten....
-		// jenes Element könnte als Parameter übergeben werden
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
+	public static String takeScreenshot(WebDriver webdriver, String xpath_to_wait_on) {
+		if (xpath_to_wait_on != null) {
+			// auf element warten, damit Seite vollständig geladen
+			WebDriverWait wait = new WebDriverWait(webdriver, Duration.ofSeconds(30));
+			wait.until(ExpectedConditions.visibilityOf(webdriver.findElement(By.xpath(xpath_to_wait_on))));
 		}
+		
 		// Erhöhe die Nummer der Screenshot um 1
 		counter++;
 		// Convert web driver object to TakeScreenshot
