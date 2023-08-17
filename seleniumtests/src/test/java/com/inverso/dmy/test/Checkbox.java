@@ -55,7 +55,7 @@ public class Checkbox extends TestSuper {
 		}
 		
 		// Screenshot zweiter "nachher" - Zustand
-		Screenshot.takeScreenshot(driver, "//*[@id=\"checkboxes\"]/input[1]");
+		Screenshot.takeScreenshot(driver, null);
 		
 		// Test beenden
 		driver.quit();

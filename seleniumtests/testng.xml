@@ -6,21 +6,21 @@
 		<parameter name="urlHub" value="http://192.168.16.103:4444/wd/hub"></parameter>
 		<parameter name="browserName" value="chrome"></parameter>
 		<classes>
-			<class name="com.inverso.dmy.test.OrangeRmFormular" />
+			<class name="com.inverso.dmy.test.Checkbox" />
 		</classes>
 	</test>
-<!--	<test name="test mit firefox">-->
-<!--		<parameter name="urlHub" value="http://192.168.16.103:4444/wd/hub"></parameter>-->
-<!--		<parameter name="browserName" value="firefox"></parameter>-->
-<!--		<classes>-->
-<!--			<class name="com.inverso.dmy.test.OrangeRmFormular" />-->
-<!--		</classes>-->
-<!--	</test>-->
-<!--	<test name="test mit edge">-->
-<!--		<parameter name="urlHub" value="http://192.168.16.103:4444/wd/hub"></parameter>-->
-<!--		<parameter name="browserName" value="edge"></parameter>-->
-<!--		<classes>-->
-<!--			<class name="com.inverso.dmy.test.OrangeRmFormular" />-->
-<!--		</classes>-->
-<!--	</test>-->
+	<test name="test mit firefox">
+		<parameter name="urlHub" value="http://192.168.16.103:4444/wd/hub"></parameter>
+		<parameter name="browserName" value="firefox"></parameter>
+		<classes>
+			<class name="com.inverso.dmy.test.Checkbox" />
+		</classes>
+	</test>
+	<test name="test mit edge">
+		<parameter name="urlHub" value="http://192.168.16.103:4444/wd/hub"></parameter>
+		<parameter name="browserName" value="edge"></parameter>
+		<classes>
+			<class name="com.inverso.dmy.test.Checkbox" />
+		</classes>
+	</test>
 </suite>
