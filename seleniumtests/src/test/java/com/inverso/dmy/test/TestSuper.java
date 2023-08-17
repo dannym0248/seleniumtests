@@ -2,6 +2,7 @@ package com.inverso.dmy.test;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -56,6 +57,8 @@ public abstract class TestSuper {
 		// Fenster maximieren
 		driver.manage().window().maximize();
 		Reporter.log("Test mit '" + browserName + "' startet. (ThreadId: " + id_thread + ")", true);
+		// Festlegen, dass auf jedes Element höchstens 30 Sekunden gewartet wird
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 	}
 	
 	@Test
