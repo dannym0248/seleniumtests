@@ -49,8 +49,11 @@ public abstract class TestSuper {
 			EdgeOptions edge_options = new EdgeOptions();
 			driver = new RemoteWebDriver(url_hub, edge_options);
 			break;
-		case "phantomjs":
-			// TODO
+		case "chrome_headless":
+			ChromeOptions chrome_headless_options = new ChromeOptions();
+			chrome_headless_options.addArguments("--headless");
+			chrome_headless_options.addArguments("--disable-gpu");
+			driver = new RemoteWebDriver(url_hub, chrome_headless_options);
 			break;
 		default:
 			String fehlermeldung = "Unbekannter Browser: '" + browserName + "'";

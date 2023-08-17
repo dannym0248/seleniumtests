@@ -1,58 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[Test mit 'chrome' startet. (ThreadId: 1)]]>
+      <![CDATA[Test mit 'chrome_headless' startet. (ThreadId: 1)]]>
     </line>
     <line>
       <![CDATA[Screenshot at C:\Users\danny\git\seleniumtests\seleniumtests\screenshots\screen1.jpg]]>
     </line>
     <line>
-      <![CDATA[Screenshot at C:\Users\danny\git\seleniumtests\seleniumtests\screenshots\screen2.jpg]]>
-    </line>
-    <line>
-      <![CDATA[Screenshot at C:\Users\danny\git\seleniumtests\seleniumtests\screenshots\screen3.jpg]]>
-    </line>
-    <line>
-      <![CDATA[Test mit 'chrome' beendet. (ThreadId: 1)]]>
-    </line>
-    <line>
-      <![CDATA[Test mit 'firefox' startet. (ThreadId: 1)]]>
-    </line>
-    <line>
-      <![CDATA[Screenshot at C:\Users\danny\git\seleniumtests\seleniumtests\screenshots\screen4.jpg]]>
-    </line>
-    <line>
-      <![CDATA[Screenshot at C:\Users\danny\git\seleniumtests\seleniumtests\screenshots\screen5.jpg]]>
-    </line>
-    <line>
-      <![CDATA[Screenshot at C:\Users\danny\git\seleniumtests\seleniumtests\screenshots\screen6.jpg]]>
-    </line>
-    <line>
-      <![CDATA[Test mit 'firefox' beendet. (ThreadId: 1)]]>
-    </line>
-    <line>
-      <![CDATA[Test mit 'edge' startet. (ThreadId: 1)]]>
-    </line>
-    <line>
-      <![CDATA[Screenshot at C:\Users\danny\git\seleniumtests\seleniumtests\screenshots\screen7.jpg]]>
-    </line>
-    <line>
-      <![CDATA[Screenshot at C:\Users\danny\git\seleniumtests\seleniumtests\screenshots\screen8.jpg]]>
-    </line>
-    <line>
-      <![CDATA[Screenshot at C:\Users\danny\git\seleniumtests\seleniumtests\screenshots\screen9.jpg]]>
-    </line>
-    <line>
-      <![CDATA[Test mit 'edge' beendet. (ThreadId: 1)]]>
+      <![CDATA[Test mit 'chrome_headless' beendet. (ThreadId: 1)]]>
     </line>
   </reporter-output>
-  <suite started-at="2023-08-17T10:29:32 MESZ" name="Suite für Browser Chrome, Firefox, Edge" finished-at="2023-08-17T10:29:56 MESZ" duration-ms="23631">
+  <suite started-at="2023-08-17T11:54:31 MESZ" name="Suite für Browser Chrome, Firefox, Edge" finished-at="2023-08-17T11:54:36 MESZ" duration-ms="5507">
     <groups>
     </groups>
-    <test started-at="2023-08-17T10:29:32 MESZ" name="test mit chrome" finished-at="2023-08-17T10:29:40 MESZ" duration-ms="8017">
-      <class name="com.inverso.dmy.test.Checkbox">
-        <test-method is-config="true" signature="test_vorbereitung(java.lang.String,java.lang.String)[pri:0, instance:com.inverso.dmy.test.Checkbox@5fb759d6]" started-at="2023-08-17T10:29:32 MESZ" name="test_vorbereitung" finished-at="2023-08-17T10:29:37 MESZ" duration-ms="4547" status="PASS">
+    <test started-at="2023-08-17T11:54:31 MESZ" name="test mit chrome" finished-at="2023-08-17T11:54:36 MESZ" duration-ms="5507">
+      <class name="com.inverso.dmy.test.OpenInverso">
+        <test-method is-config="true" signature="test_vorbereitung(java.lang.String,java.lang.String)[pri:0, instance:com.inverso.dmy.test.OpenInverso@14fc5f04]" started-at="2023-08-17T11:54:31 MESZ" name="test_vorbereitung" finished-at="2023-08-17T11:54:35 MESZ" duration-ms="3912" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -61,159 +25,43 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[chrome]]>
+                <![CDATA[chrome_headless]]>
               </value>
             </param>
           </params>
           <reporter-output>
             <line>
-              <![CDATA[Test mit 'chrome' startet. (ThreadId: 1)]]>
+              <![CDATA[Test mit 'chrome_headless' startet. (ThreadId: 1)]]>
             </line>
           </reporter-output>
         </test-method> <!-- test_vorbereitung -->
-        <test-method signature="test_method()[pri:0, instance:com.inverso.dmy.test.Checkbox@5fb759d6]" started-at="2023-08-17T10:29:37 MESZ" name="test_method" finished-at="2023-08-17T10:29:40 MESZ" duration-ms="3334" status="PASS">
+        <test-method signature="test_method()[pri:0, instance:com.inverso.dmy.test.OpenInverso@14fc5f04]" started-at="2023-08-17T11:54:35 MESZ" name="test_method" finished-at="2023-08-17T11:54:36 MESZ" duration-ms="1519" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Screenshot at C:\Users\danny\git\seleniumtests\seleniumtests\screenshots\screen1.jpg]]>
             </line>
             <line>
-              <![CDATA[Screenshot at C:\Users\danny\git\seleniumtests\seleniumtests\screenshots\screen2.jpg]]>
-            </line>
-            <line>
-              <![CDATA[Screenshot at C:\Users\danny\git\seleniumtests\seleniumtests\screenshots\screen3.jpg]]>
-            </line>
-            <line>
-              <![CDATA[Test mit 'chrome' beendet. (ThreadId: 1)]]>
+              <![CDATA[Test mit 'chrome_headless' beendet. (ThreadId: 1)]]>
             </line>
           </reporter-output>
         </test-method> <!-- test_method -->
-        <test-method is-config="true" signature="failure_setup(org.testng.ITestResult,java.lang.String)[pri:0, instance:com.inverso.dmy.test.Checkbox@5fb759d6]" started-at="2023-08-17T10:29:40 MESZ" name="failure_setup" finished-at="2023-08-17T10:29:40 MESZ" duration-ms="7" status="PASS">
+        <test-method is-config="true" signature="failure_setup(org.testng.ITestResult,java.lang.String)[pri:0, instance:com.inverso.dmy.test.OpenInverso@14fc5f04]" started-at="2023-08-17T11:54:36 MESZ" name="failure_setup" finished-at="2023-08-17T11:54:36 MESZ" duration-ms="5" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test_method status=SUCCESS method=Checkbox.test_method()[pri:0, instance:com.inverso.dmy.test.Checkbox@5fb759d6] output=Screenshot at C:\Users\danny\git\seleniumtests\seleniumtests\screenshots\screen1.jpg]]]>
+                <![CDATA[[TestResult name=test_method status=SUCCESS method=OpenInverso.test_method()[pri:0, instance:com.inverso.dmy.test.OpenInverso@14fc5f04] output=Screenshot at C:\Users\danny\git\seleniumtests\seleniumtests\screenshots\screen1.jpg]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[chrome]]>
+                <![CDATA[chrome_headless]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- failure_setup -->
-      </class> <!-- com.inverso.dmy.test.Checkbox -->
+      </class> <!-- com.inverso.dmy.test.OpenInverso -->
     </test> <!-- test mit chrome -->
-    <test started-at="2023-08-17T10:29:40 MESZ" name="test mit firefox" finished-at="2023-08-17T10:29:50 MESZ" duration-ms="9582">
-      <class name="com.inverso.dmy.test.Checkbox">
-        <test-method is-config="true" signature="test_vorbereitung(java.lang.String,java.lang.String)[pri:0, instance:com.inverso.dmy.test.Checkbox@2584b82d]" started-at="2023-08-17T10:29:40 MESZ" name="test_vorbereitung" finished-at="2023-08-17T10:29:45 MESZ" duration-ms="4979" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[http://192.168.16.103:4444/wd/hub]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[Test mit 'firefox' startet. (ThreadId: 1)]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- test_vorbereitung -->
-        <test-method signature="test_method()[pri:0, instance:com.inverso.dmy.test.Checkbox@2584b82d]" started-at="2023-08-17T10:29:45 MESZ" name="test_method" finished-at="2023-08-17T10:29:50 MESZ" duration-ms="4587" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[Screenshot at C:\Users\danny\git\seleniumtests\seleniumtests\screenshots\screen4.jpg]]>
-            </line>
-            <line>
-              <![CDATA[Screenshot at C:\Users\danny\git\seleniumtests\seleniumtests\screenshots\screen5.jpg]]>
-            </line>
-            <line>
-              <![CDATA[Screenshot at C:\Users\danny\git\seleniumtests\seleniumtests\screenshots\screen6.jpg]]>
-            </line>
-            <line>
-              <![CDATA[Test mit 'firefox' beendet. (ThreadId: 1)]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- test_method -->
-        <test-method is-config="true" signature="failure_setup(org.testng.ITestResult,java.lang.String)[pri:0, instance:com.inverso.dmy.test.Checkbox@2584b82d]" started-at="2023-08-17T10:29:50 MESZ" name="failure_setup" finished-at="2023-08-17T10:29:50 MESZ" duration-ms="3" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=test_method status=SUCCESS method=Checkbox.test_method()[pri:0, instance:com.inverso.dmy.test.Checkbox@2584b82d] output=Screenshot at C:\Users\danny\git\seleniumtests\seleniumtests\screenshots\screen4.jpg]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- failure_setup -->
-      </class> <!-- com.inverso.dmy.test.Checkbox -->
-    </test> <!-- test mit firefox -->
-    <test started-at="2023-08-17T10:29:50 MESZ" name="test mit edge" finished-at="2023-08-17T10:29:56 MESZ" duration-ms="5893">
-      <class name="com.inverso.dmy.test.Checkbox">
-        <test-method is-config="true" signature="test_vorbereitung(java.lang.String,java.lang.String)[pri:0, instance:com.inverso.dmy.test.Checkbox@6933b6c6]" started-at="2023-08-17T10:29:50 MESZ" name="test_vorbereitung" finished-at="2023-08-17T10:29:52 MESZ" duration-ms="2618" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[http://192.168.16.103:4444/wd/hub]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[edge]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[Test mit 'edge' startet. (ThreadId: 1)]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- test_vorbereitung -->
-        <test-method signature="test_method()[pri:0, instance:com.inverso.dmy.test.Checkbox@6933b6c6]" started-at="2023-08-17T10:29:52 MESZ" name="test_method" finished-at="2023-08-17T10:29:56 MESZ" duration-ms="3264" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[Screenshot at C:\Users\danny\git\seleniumtests\seleniumtests\screenshots\screen7.jpg]]>
-            </line>
-            <line>
-              <![CDATA[Screenshot at C:\Users\danny\git\seleniumtests\seleniumtests\screenshots\screen8.jpg]]>
-            </line>
-            <line>
-              <![CDATA[Screenshot at C:\Users\danny\git\seleniumtests\seleniumtests\screenshots\screen9.jpg]]>
-            </line>
-            <line>
-              <![CDATA[Test mit 'edge' beendet. (ThreadId: 1)]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- test_method -->
-        <test-method is-config="true" signature="failure_setup(org.testng.ITestResult,java.lang.String)[pri:0, instance:com.inverso.dmy.test.Checkbox@6933b6c6]" started-at="2023-08-17T10:29:56 MESZ" name="failure_setup" finished-at="2023-08-17T10:29:56 MESZ" duration-ms="5" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=test_method status=SUCCESS method=Checkbox.test_method()[pri:0, instance:com.inverso.dmy.test.Checkbox@6933b6c6] output=Screenshot at C:\Users\danny\git\seleniumtests\seleniumtests\screenshots\screen7.jpg]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[edge]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- failure_setup -->
-      </class> <!-- com.inverso.dmy.test.Checkbox -->
-    </test> <!-- test mit edge -->
   </suite> <!-- Suite für Browser Chrome, Firefox, Edge -->
 </testng-results>
