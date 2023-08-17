@@ -22,7 +22,7 @@ public class Checkbox extends TestSuper {
 		String url_webseite = "https://the-internet.herokuapp.com/checkboxes";
 		
 		// Webseite öffnen
-		driver.get(url_webseite);
+		driver.get(url_webseite);		
 		
 		// Elemente, die Checkboxen sind, finden
 		// Initialisierung nicht nötig, da, wenn Elemente nicht gefunden werden,

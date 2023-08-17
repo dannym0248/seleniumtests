@@ -49,6 +49,9 @@ public abstract class TestSuper {
 			EdgeOptions edge_options = new EdgeOptions();
 			driver = new RemoteWebDriver(url_hub, edge_options);
 			break;
+		case "phantomjs":
+			// TODO
+			break;
 		default:
 			String fehlermeldung = "Unbekannter Browser: '" + browserName + "'";
 			Reporter.log(fehlermeldung);
