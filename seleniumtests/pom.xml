@@ -13,7 +13,6 @@
 			<artifactId>selenium-java</artifactId>
 			<version>4.11.0</version>
 		</dependency>
-
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<dependency>
 			<groupId>org.testng</groupId>
@@ -68,7 +67,12 @@
 			<artifactId>maven-source-plugin</artifactId>
 			<version>3.3.0</version>
 		</dependency>
-
+		<!-- https://mvnrepository.com/artifact/com.codeborne/phantomjsdriver -->
+		<dependency>
+			<groupId>com.github.detro.ghostdriver</groupId>
+			<artifactId>phantomjsdriver</artifactId>
+			<version>1.0.1</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
